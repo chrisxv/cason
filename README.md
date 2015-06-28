@@ -1,4 +1,3 @@
-# cason
 #include <iostream>
 using namespace std;
 
@@ -6,17 +5,20 @@ using namespace std;
 
 int main ()
 {
-  int count = 1000, sum = 0;
-  
-  while (count > 0)
-  {
-    if (count%5==0)
-        {sum += count; count--;}
-    else if (count%3==0)
-        {sum += count; count--;}
-    else
-        count--;
-  }
-  
-  system ("PAUSE");
+    int count = 0, sum = 0;
+    
+    while (count < 1000)
+    {
+        if (count%5==0)
+            sum += count;
+        else if (count%3==0)
+            sum += count;
+        
+        count++;
+    }
+    
+    cout<<"The sum of all multiples of 3 and 5 below 1000 is "<< sum <<endl;
+    
+    system ("PAUSE");
+    return 0;
 }
